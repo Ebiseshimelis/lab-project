@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="login-card" class="form-card">
+            <h2>Login Form</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label>Username:</label>
+                    <input type="text" id="loginUser" required>
+                </div>
+                <div class="input-group">
+                    <label>Password:</label>
+                    <input type="password" id="loginPass" required>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="btn btn-blue">Login</button>
+                    <button type="reset" class="btn btn-red">Clear</button>
+                </div>
+            </form>
+            <p class="toggle-text"><a href="#" id="toRegister">Create New Account</a></p>
+        </div>
+
+        <div id="register-card" class="form-card hidden">
+            <h2>Registration Form</h2>
+            <form id="registrationForm">
+                <div class="row">
+                    <div class="input-group">
+                        <label>First Name</label>
+                        <input type="text" id="fName" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Last Name</label>
+                        <input type="text" id="lName" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Department</label>
+                        <select id="dept">
+                            <option value="cs">Computer Science</option>
+                            <option value="se">Software Engineering</option>
+                            <option value="it">Information Technology</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group">
+                        <label>Gender</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gender" value="male"> Male</label>
+                            <label><input type="radio" name="gender" value="female"> Female</label>
+                            <label><input type="radio" name="gender" value="other"> Other</label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Hobbies</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" value="reading"> Reading</label>
+                            <label><input type="checkbox" value="sports"> Sports</label>
+                            <label><input type="checkbox" value="music"> Music</label>
+                            <label><input type="checkbox" value="travel"> Travel</label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Others</label>
+                        <textarea id="others" rows="4"></textarea>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn btn-blue">Register</button>
+                    <button type="reset" class="btn btn-red">Clear</button>
+                </div>
+            </form>
+            <p class="toggle-text"><a href="#" id="toLogin">Already have an account? Login</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
