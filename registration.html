@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card wide">
+        <h2 class="form-title">Registration Form</h2>
+
+        <form id="registrationForm" action="handle_registration.php" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fName">First Name</label>
+                    <input type="text" name="fname" id="fName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lName">Last Name</label>
+                    <input type="text" name="lname" id="lName" required>
+                </div>
+                <div class="form-group">
+                    <label for="dept">Department</label>
+                    <select name="dept" id="dept" required>
+                        <option value="Computer Science" selected>Computer Science</option>
+                        <option value="Software Engineering">Software Engineering</option>
+                        <option value="Information Technology">Information Technology</option>
+                    
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="options" style="display: flex; flex-direction: column; gap: 4px;">
+                        <label><input type="radio" name="gender" value="Male" required> Male</label>
+                        <label><input type="radio" name="gender" value="Female"> Female</label>
+                        <label><input type="radio" name="gender" value="Other"> Other</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Hobbies</label>
+                    <div class="options" style="display: flex; flex-direction: column; gap: 4px;">
+                        <label><input type="checkbox" class="hobby" name="hobbies[]" value="Reading"> Reading</label>
+                        <label><input type="checkbox" class="hobby" name="hobbies[]" value="Sports"> Sports</label>
+                        <label><input type="checkbox" class="hobby" name="hobbies[]" value="Music"> Music</label>
+                        <label><input type="checkbox" class="hobby" name="hobbies[]" value="Travel"> Travel</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="others">Others (Optional)</label>
+                    <textarea name="others" id="others" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="regEmail">Username / Email</label>
+                    <input type="text" name="user_email" id="regEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPass">Password</label>
+                    <input type="password" name="password" id="regPass" required>
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <button type="submit" class="btn btn-blue">Register</button>
+                <button type="reset" class="btn btn-red">Clear</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
